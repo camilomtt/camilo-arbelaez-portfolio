@@ -1,0 +1,29 @@
+---
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh flex flex-col justify-between gap-32">
+          <div class="space-y-4 sm:space-y-12">
+               <H1> About Me </H1>
+
+               <p class="text-xl xl:text-2xl text-zinc-500 text-balance">
+                    <a href="https://en.wikipedia.org/wiki/Nikola_Tesla" target="_blank" class="underline underline-offset-4 decoration-zinc-400 hover:text-zinc-50 hover:decoration-zinc-200">
+                         
+                    </a>
+                    I'm a Web Application Developer with a technical degree and a Google UX Design certification. I'm passionate about creating innovative, user-centered solutions, combining my development skills with a strong foundation in design principles. My experience at Code Labs has equipped me to manage projects from initial conception through to development and quality assurance.
+               </p>
+          </div>
+
+          <div class="space-y-2 text-base sm:text-lg">
+               <h2 class="px-4 text-zinc-400 underline underline-offset-4 decoration-zinc-500">Key Skills & Technologies</h2>
+
+               <ul class="px-4 text-zinc-400 list-disc list-outside">
+                    <li>Skills: UI/UX Development, Quality Assurance (QA), Project Management, English B2.</li>
+                    <li>Technologies: JavaScript, HTML, CSS, React, Astro, Tailwind, Bootstrap, WordPress, Git, Vite.</li>
+                    <li>Certifications: Google UX Design, Software Analysis and Development Technologist, Web Programming Technician.</li>
+               </ul>
+          </div>
+     </div>
+</InfoLayout>

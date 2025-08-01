@@ -1,0 +1,105 @@
+---
+import { Image } from 'astro:assets';
+import H1 from "../components/h1.astro";
+import InfoLayout from "../layouts/InfoLayout.astro";
+import GameLanding from "../assets/game-landing.png";
+import DbDashboard from "../assets/db-dashboard.png";
+import MovieFinder from "../assets/movie-finder.png";
+import WeatherApp from "../assets/weather-app.png"
+import imagesFinder from "../assets/buscador-imagenes-mockup.png"
+import CryptoApp from "../assets/crypto-app.png"
+import PomokanApp from "../assets/pomokan.png"
+import LandingPage from "../assets/landing-gp.png"
+
+const projects = [
+     {
+          title: "Greenplus Landing Page",
+          description: "Transformed a static Figma design into a fully interactive web experience, prioritizing usability and modern aesthetics. The result is a responsive and captivating landing page that perfectly represents the brand.",
+          image: LandingPage,
+          liveDemoUrl: "https://camilomtt.github.io/landing-design-gp/",
+          githubUrl: "https://github.com/camilomtt/landing-design-gp"
+     },
+     {
+          title: "Game Tournament Landing Page",
+          description: "Elevated the Valorant tournament experience with a landing page built in React, featuring captivating Framer Motion animations and a responsive design that looks incredible on any screen.",
+          image: GameLanding,
+          liveDemoUrl: "https://torneo-valorant-landing.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/torneo-valorant-landing"
+     },
+     {
+          title: "Dragon Ball Dashboard",
+          description: "Developed a Dragon Ball dashboard with an authentication system that consumes an API to organize and present character data in clear and orderly lists. U:camilo@gmail.com P:password",
+          image: DbDashboard,
+          liveDemoUrl: "https://db-dashboard-eosin.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/db-dashboard"
+     },
+      {
+          title: "PomoKan Productivity Tool",
+          description: "Developed PomoKan, a productivity tool that merges a Kanban board with a Pomodoro timer. Its React-based drag-and-drop interface enables fluid and efficient task management.",
+          image: PomokanApp,
+          liveDemoUrl: "https://react-pomodoro-kanban.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/react-pomodoro-kanban"
+     },
+      {
+          title: "Cryptocurrency Visualization Web App",
+          description: "Built a cryptocurrency visualization dashboard that consumes an API to gather market data. The interface organizes the information into an interactive table with a search filter, making it easy to analyze and filter assets.",
+          image: CryptoApp,
+          liveDemoUrl: "https://crypto-list-react.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/crypto-list-react"
+     },
+      {
+          title: "Image Search Tool",
+          description: "Built a dynamic image search tool in React that consumes an API to deliver high-quality visual results. The intuitive interface allows users to instantly explore and find images.",
+          image: imagesFinder,
+          liveDemoUrl: "https://react-image-search-three.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/react-image-search"
+     },
+      {
+          title: "Movie Search Tool",
+          description: "Built a movie search portal in React that consumes an API to access a vast library of titles. The dynamic interface allows users to find, explore, and discover their favorite movies with a fluid experience.",
+          image: MovieFinder,
+          liveDemoUrl: "https://movie-finder-react-xi.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/movie-finder-react"
+     },
+      {
+          title: "Weather Web Application",
+          description: "Built a weather application with a modern design that consumes an API to transform data into a visually appealing experience. Users can instantly get weather and other relevant data for any city in the world.",
+          image: WeatherApp,
+          liveDemoUrl: "https://clima-ciudades-mu.vercel.app/",
+          githubUrl: "https://github.com/camilomtt/clima-ciudades"
+     }];
+---
+
+<InfoLayout>
+     <div class="p-4 sm:pt-8 sm:px-12 pb-20 min-h-dvh">
+          <H1> Projects </H1>
+
+          <ul class="mt-4 sm:mt-12 grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-16 sm:gap-8">
+               {projects.map((project) => (
+                    <li>
+                         <Image src={project.image} alt={project.title} class="aspect-[1/1.33] object-center object-cover rounded-lg shadow-lg mb-4 sm:mb-0 sm:mr-4" />
+                         <div class="p-1 sm:p-2">
+                              <h2 class="text-base text-zinc-100">{project.title}</h2>
+                              <p class="text-sm text-zinc-400 text-balance">{project.description}</p>
+                              <a 
+                                href={project.liveDemoUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="text-teal-300 hover:text-teal-200 transition-colors"
+                            >
+                                Live Demo &nbsp;&nbsp;&nbsp;
+                            </a>
+                            <a
+                                href={project.githubUrl} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                class="text-zinc-300 hover:text-zinc-100 transition-colors"
+                            >
+                              &lt;Code&gt;
+                            </a>
+                         </div>
+                    </li>
+               ))}
+          </ul>
+     </div>
+</InfoLayout>
